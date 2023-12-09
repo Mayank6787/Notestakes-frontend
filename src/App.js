@@ -1,24 +1,32 @@
-import logo from './logo.svg';
+
 import './App.css';
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
+import Nav from './components/Nav';
+import { HashRouter,Routes, Route } from 'react-router-dom';
+import CreateTask from './components/CreateTask';
+import TaskList from './components/TaskList';
+import AboutUs from './components/AboutUs'
+import ContactUs from './components/ContactUs';
+import EditTask from './components/EditTask';
+import CreateNote from './components/CreateNote';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section class="backs"> 
+      <HashRouter>
+      <Nav />
+      <Routes>
+        <Route path="/" element={<CreateTask/>}/>
+        <Route path="/create-task" element={<CreateTask/>}/>
+        <Route path="/task-list" element={<TaskList/>}/>
+        <Route path="/about-us" element={<AboutUs/>}/>
+        <Route path="/contact-us" element={<ContactUs/>}/>
+        <Route path="/edit-task/:id" element={<EditTask/>}/>
+        <Route path="/create-notes" element={<CreateNote/>}/>
+      </Routes>
+   
+    </HashRouter></section>
+   
   );
 }
 

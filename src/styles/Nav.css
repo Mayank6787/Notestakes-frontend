@@ -1,0 +1,20 @@
+.navbar{
+  background: rgb(235,234,255);
+/* background: linear-gradient(90deg, rgba(235,234,255,1) 0%, rgba(228,228,255,1) 35%, rgba(190,244,255,1) 100%); */
+background: linear-gradient(135deg, #cf9aff, #95c0ff);
+
+}
+.nav-link{
+  color: rgb(59, 59, 59);
+  text-decoration: none;
+  font-weight: 550;
+  font-size: 0.95rem;
+ 
+}
+.nav-link:hover{
+  color: rgb(129, 125, 125);
+}
+
+
+
+
